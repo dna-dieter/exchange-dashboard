@@ -5,14 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Earnings Kalender - Exchange Dashboard</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 10px; font-size: 12px; }
-  h1 { color: #00d4ff; font-size: 1.4em; margin: 5px 0; position: sticky; top: 0; z-index: 101; background: #1a1a2e; padding: 5px 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 0; font-size: 12px; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+  .header-fixed { flex-shrink: 0; padding: 10px 10px 0; background: #1a1a2e; border-bottom: 2px solid #00d4ff; }
+  .content-scroll { flex: 1; overflow-y: auto; padding: 0 10px 10px; }
+  h1 { color: #00d4ff; font-size: 1.4em; margin: 0; }
   a { color: #00d4ff; }
   .back { margin-bottom: 10px; display: inline-block; }
   .info { background: #16213e; padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 11px; }
   
   /* Kalender-Navigation */
-  .cal-nav { display: flex; gap: 3px; flex-wrap: wrap; margin: 10px 0; position: sticky; top: 0; z-index: 100; background: #1a1a2e; padding: 8px 0; border-bottom: 2px solid #00d4ff; }
+  .cal-nav { display: flex; gap: 3px; flex-wrap: wrap; margin: 0; padding: 8px 0; }
   .cal-day { padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 11px; text-align: center; min-width: 35px; }
   .cal-day.past { background: #222; color: #666; }
   .cal-day.today { background: #006644; color: #00ff88; border: 1px solid #00ff88; font-weight: bold; }
@@ -41,6 +43,7 @@
 </style>
 </head>
 <body>
+<div class="header-fixed">
 <a class="back" href="index.html">&larr; Dashboard</a>
 <h1>Earnings Kalender Maerz/April 2026</h1>
 <div class="info">
@@ -104,6 +107,8 @@
 <a class="cal-day future" href="#d2026-04-29" title="Mi 29.04. - 293 Earnings">29<br><span style="font-size:9px">293</span></a>
 <a class="cal-day future" href="#d2026-04-30" title="Do 30.04. - 20 Earnings">30<br><span style="font-size:9px">20</span></a>
 </div>
+</div>
+<div class="content-scroll">
 <div class="day-section" id="d2026-03-02">
   <div class="day-header past">Mo 02.03.2026 — 81 Earnings</div>
   <table>
@@ -3246,5 +3251,6 @@
   </table>
 </div>
 <p class="updated">Aktualisiert: 26.03.2026 16:11 | Quelle: NASDAQ Earnings Calendar</p>
+</div>
 </body>
 </html>
