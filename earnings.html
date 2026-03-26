@@ -6,13 +6,13 @@
 <title>Earnings Kalender - Exchange Dashboard</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 10px; font-size: 12px; }
-  h1 { color: #00d4ff; font-size: 1.4em; margin: 5px 0; }
+  h1 { color: #00d4ff; font-size: 1.4em; margin: 5px 0; position: sticky; top: 0; z-index: 101; background: #1a1a2e; padding: 5px 0; }
   a { color: #00d4ff; }
   .back { margin-bottom: 10px; display: inline-block; }
   .info { background: #16213e; padding: 8px 12px; border-radius: 6px; margin: 8px 0; font-size: 11px; }
   
   /* Kalender-Navigation */
-  .cal-nav { display: flex; gap: 3px; flex-wrap: wrap; margin: 10px 0; }
+  .cal-nav { display: flex; gap: 3px; flex-wrap: wrap; margin: 10px 0; position: sticky; top: 0; z-index: 100; background: #1a1a2e; padding: 8px 0; border-bottom: 2px solid #00d4ff; }
   .cal-day { padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 11px; text-align: center; min-width: 35px; }
   .cal-day.past { background: #222; color: #666; }
   .cal-day.today { background: #006644; color: #00ff88; border: 1px solid #00ff88; font-weight: bold; }
